@@ -1,0 +1,27 @@
+{
+  "info": {
+    "name": "Baozi Store API",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+  },
+  "variable": [{"key":"baseUrl","value":"http://localhost:8080"}],
+  "item": [
+    {"name":"Clientes","item":[
+      {"name":"POST Criar Cliente","request":{"method":"POST","header":[{"key":"Content-Type","value":"application/json"}],"body":{"mode":"raw","raw":"{\n  \"nome\": \"André Gabriel da Silva Cortellini - 5499647\",\n  \"clienteDesde\": \"2026-10-07\"\n}"},"url":{"raw":"{{baseUrl}}/clientes","host":["{{baseUrl}}"],"path":["clientes"]}}},
+      {"name":"GET Listar Clientes","request":{"method":"GET","url":{"raw":"{{baseUrl}}/clientes","host":["{{baseUrl}}"],"path":["clientes"]}}},
+      {"name":"GET Cliente por ID","request":{"method":"GET","url":{"raw":"{{baseUrl}}/clientes/1","host":["{{baseUrl}}"],"path":["clientes","1"]}}},
+      {"name":"DELETE Cliente","request":{"method":"DELETE","url":{"raw":"{{baseUrl}}/clientes/1","host":["{{baseUrl}}"],"path":["clientes","1"]}}}
+    ]},
+    {"name":"Produtos","item":[
+      {"name":"POST Criar Produto","request":{"method":"POST","header":[{"key":"Content-Type","value":"application/json"}],"body":{"mode":"raw","raw":"{\n  \"nome\": \"Baozi Tradicional\",\n  \"preco\": 8.50,\n  \"estoque\": true\n}"},"url":{"raw":"{{baseUrl}}/produtos","host":["{{baseUrl}}"],"path":["produtos"]}}},
+      {"name":"GET Listar Produtos","request":{"method":"GET","url":{"raw":"{{baseUrl}}/produtos","host":["{{baseUrl}}"],"path":["produtos"]}}},
+      {"name":"GET Produto por ID","request":{"method":"GET","url":{"raw":"{{baseUrl}}/produtos/1","host":["{{baseUrl}}"],"path":["produtos","1"]}}},
+      {"name":"DELETE Produto","request":{"method":"DELETE","url":{"raw":"{{baseUrl}}/produtos/1","host":["{{baseUrl}}"],"path":["produtos","1"]}}}
+    ]},
+    {"name":"Pedidos","item":[
+      {"name":"POST Criar Pedido","request":{"method":"POST","header":[{"key":"Content-Type","value":"application/json"}],"body":{"mode":"raw","raw":"{\n  \"clienteId\": 1,\n  \"produtoId\": 1,\n  \"quantidade\": 4\n}"},"url":{"raw":"{{baseUrl}}/pedidos","host":["{{baseUrl}}"],"path":["pedidos"]}}},
+      {"name":"GET Listar Pedidos","request":{"method":"GET","url":{"raw":"{{baseUrl}}/pedidos","host":["{{baseUrl}}"],"path":["pedidos"]}}},
+      {"name":"GET Pedido por ID","request":{"method":"GET","url":{"raw":"{{baseUrl}}/pedidos/1","host":["{{baseUrl}}"],"path":["pedidos","1"]}}},
+      {"name":"DELETE Pedido","request":{"method":"DELETE","url":{"raw":"{{baseUrl}}/pedidos/1","host":["{{baseUrl}}"],"path":["pedidos","1"]}}}
+    ]}
+  ]
+}
